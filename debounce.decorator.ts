@@ -16,3 +16,21 @@ export function Debounce(milliseconds: number): MethodDecorator {
         return descriptor;
     };
 }
+
+
+
+// usage example 
+export class AppComponent {
+
+  constructor() {
+    this.foo()
+  }
+
+  @Debounce(1000)
+  foo() {
+    console.log("Fired after 1 second");
+  }
+
+  // ==> "Fired after 1 second"
+}
+
