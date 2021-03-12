@@ -1,3 +1,11 @@
+/**
+ * If your method returns the same result given the same parameters, you can add this decorator for a performance optimization in certain cases.
+ * This means that original method execution will be skiped, and the last result will be reused.
+ *
+ * Warning 1: For pure functions only!
+ *
+ * Warning 2: It will only shallowly compare paramaters.
+ */
 export function PureFunctionMemo<T>(
   target: T,
   propertyKey: string,
