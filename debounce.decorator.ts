@@ -1,3 +1,8 @@
+/**
+ * Delays and runs the original method in given milliseconds.
+ * 
+ * Could be useful for the keyup events to delay execution until the user has stopped typing for a predetermined amount of time.
+ */
 export function Debounce(milliseconds: number): MethodDecorator {
     return function (target: Function, propertyKey: string, descriptor: PropertyDescriptor) {
         const map = new WeakMap();
